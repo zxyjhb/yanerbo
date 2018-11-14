@@ -1,62 +1,51 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>yanerbo-ucms</artifactId>
-  <name>统一配置管理中心</name>
-  <description>统一配置管理中心</description>
-  
+  <artifactId>yanerbo-gateway</artifactId>
+  <packaging>jar</packaging>
+  <description>业务</description>
+  	
   	<parent>
 	  	<groupId>com.yanerbo</groupId>
 	  	<artifactId>yanerbo-parent</artifactId>
 	  	<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	
-	
+
+
 	<dependencies>
 	
-		<!-- spring mvc 启动  -->
+		<!-- spring mvc启动 -->	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
-		<!-- spring conifg 服务 -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-config-server</artifactId>
-		</dependency>
-		
-		<!-- spring 注册中心消费者 -->
+		<!-- spring cloud eureka 注册服务启动 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
-		
+		<!-- zuul网关服务启动 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zuul</artifactId>
+		</dependency>
 		<!-- spring boot 监控启动 -->
 		<dependency>
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-		
-		<!-- spring rabbitmq作为总线 可以实现动态刷新配置中心-->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
-		</dependency>
-		
-		
-		
-		<!-- 是哟个rabbitmq作为总线 -->
-		<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
 
-
+		
 	</dependencies>
-  
-  
-  
-  
-  
-  
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+  	
+
+  	
 </project>
