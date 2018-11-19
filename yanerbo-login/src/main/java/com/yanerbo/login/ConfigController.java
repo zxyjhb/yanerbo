@@ -10,29 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class ConfigController {
 	
 	
-	@Value("${version}")
-	private String version;
+	@Value("${yanerbo-db-mysql-user}")
+	private String user;
 	
-	@Value("${group}")
-	private String group;
-	
-	@Value("${tag}")
-	private String tag;
-	
-    @RequestMapping("/version")
-    public String getVersion() {
+	@RequestMapping("/user")
+    public String getUser() {
     	
-        return version;
+        return user;
     }
-    
-    @RequestMapping("/tag")
-    public String getTag() {
-        return tag;
-    }
-    
-    @RequestMapping("/group")
-    public String getGroup() {
-        return group;
-    }
-
+   
 }
