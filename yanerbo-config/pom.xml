@@ -43,13 +43,16 @@
 			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
 		</dependency>
 		
-		
-		
-		<!-- 是哟个rabbitmq作为总线 -->
 		<dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
         </dependency>
+
+		<!-- 是哟个rabbitmq作为总线 -->
+		<!-- <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency> -->
 
 
 	</dependencies>
